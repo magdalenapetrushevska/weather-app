@@ -1,0 +1,99 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    height: 1000;
+    margin:0;
+    font-family: 'Open Sans', sans-serif;
+    background:#222;
+    background-image: url('https://source.unsplash.com/1600x900/?landscape');
+    font-size:120%;
+}
+
+.card{
+    background: #000000d0;
+    color:white;
+    padding:2em;
+    border-radius: 30px;
+    max-width:500px;
+    max-height:500px;
+    margin:5em;
+   
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button{
+    margin:0.5em;
+    border-radius: 50%;
+    border:none;
+    height: 44px;
+    width: 44px;
+    outline: none;
+    background: #7c7c7c2b;
+    color:white;
+    cursor: pointer;
+}
+
+input{
+    border-radius: 10px;
+    height: 30px;
+    padding:0.5em;
+    width: 250px;
+    margin: 5px;
+    background: #7c7c7c2b;
+    outline: none;
+    border:none;
+    font-size:medium;
+    color:white;
+}
+button:hover{
+    background:#7c7c7c6b;
+}
+
+.temp{
+    margin-left:em;
+    margin-bottom:0.4em;
+   align-content: center;
+}
+
+.description{
+    text-transform: capitalize;
+    margin-left:8px;
+}
+
+
+/* .weather.loading{
+    visibility: hidden;
+    max-height: 20px;
+    position: relative;
+
+}
+
+.weather.loading:after{
+    visibility: visible;
+    content: "Loading ...";
+    color:white;
+    position: absolute;
+    top:0px;
+    left:20px;
+} */
+.flex{
+    display: flex;
+    align-items: center;
+}
+.weather{
+    align-items: center;
+    margin:30px;
+   
+}
+.temperature{
+    margin-left:80px;
+}
+.title-city{
+   font-size:20px;
+}
