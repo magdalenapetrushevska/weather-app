@@ -1,7 +1,34 @@
+const success = (position) =>{
+    const apiKey = "bc12083e70d2d22298c2df1cec7101d9";
+    const latitude = position.coords.latitude;
+    const longitude = position.coords.longitude;
+    fetch(
+        "https://api.openweathermap.org/data/2.5/weather?lat="+ latitude+"&lon="+longitude+"&units=metric&appid="+apiKey
+        
+      
+    )
+    .then((response) => {
+        if(!response.ok){
+            alert("No weather found");
+            throw new Error("No weather found.");
+        }
+        return response.json();
+    })
+    .then((data) => this.displayWeather(data));
+}
+
+const error = () =>{
+    console.log("Unable to retreive your location.");
+}
+
+ function useLocation(){
+   navigator.geolocation.getCurrentPosition(success,error);
+}
+    
     function fetchWeather() {
         const apiKey = "bc12083e70d2d22298c2df1cec7101d9";
         const city = document.getElementById("searchCity").value;
-        
+
        
         fetch(
             "https://api.openweathermap.org/data/2.5/weather?q="+ city+"&units=metric&appid="+apiKey
@@ -16,6 +43,8 @@
         })
         .then((data) => this.displayWeather(data));
     };
+
+
     function displayWeather(data){
         const cityElement = document.getElementById("city");
         cityElement.innerHTML = data.name;

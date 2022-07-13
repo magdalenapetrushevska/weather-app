@@ -18,6 +18,10 @@ body{
     max-width:500px;
     max-height:500px;
     margin:5em;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+   
    
 }
 
@@ -27,7 +31,7 @@ body{
     justify-content: center;
 }
 
-button{
+.searchButton{
     margin:0.5em;
     border-radius: 50%;
     border:none;
@@ -51,6 +55,7 @@ input{
     font-size:medium;
     color:white;
 }
+
 button:hover{
     background:#7c7c7c6b;
 }
@@ -66,22 +71,6 @@ button:hover{
     margin-left:8px;
 }
 
-
-/* .weather.loading{
-    visibility: hidden;
-    max-height: 20px;
-    position: relative;
-
-}
-
-.weather.loading:after{
-    visibility: visible;
-    content: "Loading ...";
-    color:white;
-    position: absolute;
-    top:0px;
-    left:20px;
-} */
 .flex{
     display: flex;
     align-items: center;
@@ -97,3 +86,18 @@ button:hover{
 .title-city{
    font-size:20px;
 }
+.locationButton{
+    width:150px;
+    height:30px;
+    border-radius: 8px;
+    
+    margin-top:10px;
+    margin-left:100px;
+    background:#C8C8C8;
+    outline: none;
+}
+.locationButton:hover{
+    background-color:bisque;
+}
+
+
